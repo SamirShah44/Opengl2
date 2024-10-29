@@ -62,7 +62,7 @@ cleandep:
 # Cleans complete project
 .PHONY: cleanw
 cleanw:
-	$(DEL) $(WDELOBJ) $(DEP) $(APPNAME)$(EXE)
+	$(DEL) "$(WDELOBJ)" "$(DEP)" "$(APPNAME)$(EXE)"
 
 # Cleans only all files with the extension .d
 .PHONY: cleandepw

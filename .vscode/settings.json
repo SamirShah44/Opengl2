@@ -62,7 +62,6 @@
   "C_Cpp_Runner.useLinkTimeOptimization": true,
   "C_Cpp_Runner.msvcSecureNoWarnings": false,
   "code-runner.executorMapByFileExtension": {
-
     ".vb": "cd $dir && vbc /nologo $fileName && $dir$fileNameWithoutExt",
     ".vbs": "cscript //Nologo",
     ".scala": "scala",
@@ -101,8 +100,7 @@
     ".gleam": "gleam run -m $fileNameWithoutExt"
   },
   "code-runner.executorMap": {
-
-    "cpp": "cd $dir && g++ $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
+    "cpp": "cd $dir && g++ $fileName glad.c -I C:/GLFW/include -I C:/Opengl -L C:/GLFW/lib -lglfw3dll -lopengl32 -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
     "javascript": "node",
     "java": "cd $dir && javac $fileName && java $fileNameWithoutExt",
     "c": "cd $dir && gcc $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
@@ -161,5 +159,62 @@
     "gleam": "gleam run -m $fileNameWithoutExt"
   },
   "makefile.makePath": "mingw32-make",
-  "makefile.makefilePath": "d:\\opengl2"
+  "makefile.makefilePath": "d:\\opengl2",
+  "makefile.additionalCompilerNames": [
+    "g++"
+  ],
+  "files.associations": {
+    "array": "cpp",
+    "atomic": "cpp",
+    "bit": "cpp",
+    "*.tcc": "cpp",
+    "cctype": "cpp",
+    "charconv": "cpp",
+    "clocale": "cpp",
+    "cmath": "cpp",
+    "compare": "cpp",
+    "concepts": "cpp",
+    "cstdarg": "cpp",
+    "cstddef": "cpp",
+    "cstdint": "cpp",
+    "cstdio": "cpp",
+    "cstdlib": "cpp",
+    "ctime": "cpp",
+    "cwchar": "cpp",
+    "cwctype": "cpp",
+    "deque": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "vector": "cpp",
+    "exception": "cpp",
+    "algorithm": "cpp",
+    "functional": "cpp",
+    "iterator": "cpp",
+    "memory": "cpp",
+    "memory_resource": "cpp",
+    "numeric": "cpp",
+    "optional": "cpp",
+    "random": "cpp",
+    "string_view": "cpp",
+    "system_error": "cpp",
+    "tuple": "cpp",
+    "type_traits": "cpp",
+    "utility": "cpp",
+    "format": "cpp",
+    "initializer_list": "cpp",
+    "iosfwd": "cpp",
+    "iostream": "cpp",
+    "istream": "cpp",
+    "limits": "cpp",
+    "new": "cpp",
+    "numbers": "cpp",
+    "ostream": "cpp",
+    "span": "cpp",
+    "stdexcept": "cpp",
+    "streambuf": "cpp",
+    "text_encoding": "cpp",
+    "cinttypes": "cpp",
+    "typeinfo": "cpp",
+    "variant": "cpp"
+  }
 }
